@@ -12,5 +12,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    session.delete :name
+    redirect_to(controller:'application',action:'hello')
   end
 end
